@@ -1,0 +1,28 @@
+﻿@using TodoApp.Model
+
+<h3 class="text-success mt-3">Detail Todo</h3>
+
+<table class="table table-striped table-responsive">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Completion</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Todo.Id</td>
+            <td>@Todo.Title</td>
+            <td>@Todo.isDone</td>
+            <td>@Todo.Date</td>
+        </tr>
+    </tbody>
+</table>
+
+@code {
+    [Parameter]
+    public Todo Todo { get; set; } = new();
+
+}
